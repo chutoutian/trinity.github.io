@@ -29,17 +29,21 @@ $(document).ready(function() {
 
     });
 
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 3,
-			loop: true,
-			infinite: true,
-			autoplay: false,
-			autoplaySpeed: 3000,
-    }
+    var carouselOptions = {
+      slidesToScroll: 4,
+      slidesToShow: 4, // show 4 images at once
+      pagination: true,
+      navigation: true,
+      loop: true,
+      breakpoints: [
+        { changePoint: 480, slidesToShow: 1, slidesToScroll: 1 },
+        { changePoint: 640, slidesToShow: 2, slidesToScroll: 2 },
+        { changePoint: 768, slidesToShow: 3, slidesToScroll: 3 },
+      ],
+    };
 
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
+    // Initialize all div with carousel class
+    var carousels = bulmaCarousel.attach('.results-carousel', carouselOptions);
 
     // Loop on each carousel initialized
     for(var i = 0; i < carousels.length; i++) {

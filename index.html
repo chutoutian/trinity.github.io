@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/diving-mask.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -143,7 +143,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://drive.google.com/file/d/1zg30JxvskZU5_nYn1bSiV0O40uyTQa9b/view"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -175,66 +175,11 @@
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 -->
+
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -253,51 +198,408 @@
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+    <!-- Paper demo. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Demo</h2>
         <div class="publication-video">
-          <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/xx.mp4"
-                type="video/mp4">
+          <video id="teaser"
+       controls
+       autoplay
+       muted
+       loop
+       playsinline
+       height="100%">
+      <source src="./static/videos/demo.mp4" type="video/mp4">
+    </video>
       </video>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Paper demo. -->
   </div>
 
+</section>
+
+
+<section class="section">
   <div class="container is-max-desktop">
 
-
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-
-        <!-- Re-rendering. -->
-        <h2 class="title is-3">Qualitative Results</h2>
-    <div class="content has-text-justified">
-      <p>
-        From left to right, the columns depict images of a shipwreck, a scuba diver, a treasure hunt event, coral, stalactites in underwater caves, fish, and plants. The top row shows the origin image taken by the camera and the other rows show the decoded image under different index (token) error rate (IER). The caption for each image is its LPIPS.
-      </p>
-    </div>
-    <div class="content has-text-centered">
-      <img src="./static/images/samples.png"
-          alt="Experimental environment illustration"
-          style="width:100%;">
-    </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-
+    <h2 class="title is-3">End-to-end Performance</h2>
+        <div class="content has-text-justified">
+          <p>
+            AquaScope achieves 36.7%~40% performance gains in LPIPS compared to the existing systems.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/results.png" class="performance-image">
+        </div>
   </div>
 </section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Visual Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_optimal.png"
+                  class="interpolation-image"
+                  alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00001_4224_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00002_1725_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00003_124_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_disturbed_6.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00004_605_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00005_15120_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_disturbed_5.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00006_1170_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00007_1863_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00008_2108_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+      <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_disturbed_6.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00009_42432_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+      <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_origin.png"
+                 class="interpolation-image"
+                 alt="Sample 1">
+            <p class="sample-caption">Original</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_optimal.png"
+                 class="interpolation-image"
+                 alt="Sample 2">
+            <p class="sample-caption">No token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_disturbed_7.png"
+                 class="interpolation-image"
+                 alt="Sample 3">
+            <p class="sample-caption">10% token error</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="sample-slide">
+            <img src="./static/images/00010_4370_disturbed_10.png"
+                 class="interpolation-image"
+                 alt="Sample 4">
+            <p class="sample-caption">15% token error</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
