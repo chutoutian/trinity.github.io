@@ -79,79 +79,35 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AquaScope: Reliable Underwater Image Transmission on Mobile Devices</h1>
+          <h1 class="title is-1 publication-title">Trinity: Exploiting Latency Sensitivity to Improve Quality of Experience on Cloud VR Gaming</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://www.beitongtian.com/">Beitong Tian</a><sup>*</sup>,</span>
             <span class="author-block">
               <a href="https://chutoutian.github.io/">Lingzhi Zhao</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://bochen.info/">Bo Chen</a><sup></sup>,
+              <a href="">Yongqiang Gui</a><sup>†</sup>,</span>
+            <span class="author-block">
+              <a href="">Yanyan Suo</a><sup>†</sup>,
             </span>
             <span class="author-block">
-              <a href="https://mingyuan1997.github.io/">Mingyuan Wu</a><sup></sup>,
+              <a href="">Sandesh Dhawaskar Sathyanarayana</a><sup>†</sup>,
             </span>
             <span class="author-block">
-              <a href="">Haozhen Zheng</a><sup></sup>,
+              <a href="">Ruixiao Zhang</a><sup>†</sup>,
             </span>
             <span class="author-block">
-              <a href="https://deepakv.web.illinois.edu/">Deepak Vasisht</a><sup></sup>,
+              <a href="https://monet.cs.illinois.edu/people/klara/">Klara Nahrstedt</a><sup>*</sup>,
             </span>
             <span class="author-block">
-              <a href="https://fyy.cs.illinois.edu/">Francis Y. Yan</a><sup></sup>
-            </span>
-              <span class="author-block">
-              <a href="https://monet.cs.illinois.edu/people/klara/">Klara Nahrstedt</a><sup></sup>
+              <a href="">Shu Shi</a><sup>†</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup></sup>University of Illinois Urbana-Champaign,</span>
-          <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block"><sup>*</sup>University of Illinois Urbana-Champaign,</span>
+            <span class="author-block"><sup>†</sup>Bytedance</span>
           </div>
 
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2502.10891"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2502.10891"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/chutoutian/AquaScope"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://drive.google.com/file/d/1zg30JxvskZU5_nYn1bSiV0O40uyTQa9b/view"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div>
-
           </div>
         </div>
       </div>
@@ -188,415 +144,66 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Underwater communication is essential for both recreational and scientific activities, such as scuba diving. However, existing methods remain highly constrained by environmental challenges and often require specialized hardware, driving research into more accessible underwater communication solutions. While recent acoustic-based communication systems support text messaging on mobile devices, their low data rates severely limit broader applications.
-          </p>
-          <p>
-            We present AquaScope, the first acoustic communication system capable of underwater image transmission on commodity mobile devices. To address the key challenges of underwater environments -- limited bandwidth and high transmission errors -- AquaScope employs and enhances generative image compression to improve compression efficiency, and integrates it with reliability-enhancement techniques at the physical layer to strengthen error resilience. We implemented AquaScope on the Android platform and demonstrated its feasibility for underwater image transmission. Experimental results show that AquaScope enables reliable, low-latency image transmission while preserving perceptual image quality, across various bandwidth-constrained and error-prone underwater conditions.
+            We present Trinity, a novel and practical solution that enables dynamic game streaming from cloud servers to virtual reality (VR) headsets. Achieving the stringent motion-to-photon (MTP) latency requirement of under 25ms presents a critical challenge in VR game streaming. Existing approaches primarily support specific actions (e.g., head movement), resulting in an MTP latency gap with other actions subject to round-trip delays, thereby degrading overall user quality of experience (QoE). To bridge the MTP latency gap, Trinity proposes a novel approach grounded in the observation that player interactions exhibit heterogeneous latency requirements. Specifically, we classify user inputs into three distinct motion categories: head motion, hand motion, and body motion. By aligning latency levels with users’ perceptual sensitivity to different types of motion and strategically introducing controlled delays to the hand motion, Trinity mitigates the perceptual impact of latency discrepancy across motions. We evaluate Trinity with a highly latency-sensitive first-person shooting game streamed from a remote server to a VR headset. Real-world user studies demonstrate that Trinity delivers a user experience comparable to a local streaming setup, despite operating under network-induced delays.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper demo. -->
+    <!-- Paper figure. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Demo</h2>
-        <div class="publication-video">
-          <video id="teaser"
-       controls
-       autoplay
-       muted
-       loop
-       playsinline
-       height="100%">
-      <source src="./static/videos/demo.mp4" type="video/mp4">
-    </video>
-      </video>
+        <img src="./static/images/trinity.png" alt="Trinity figure" style="width: 100%;">
+      </div>
+    </div>
+    <!--/ Paper figure. -->
+  </div>
+
+</section>
+
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Demo</h2>
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/trinity_remote.mp4" type="video/mp4">
+          </video>
+          <p class="mt-3" style="font-size: 1.25rem;"><strong>Trinity-R: all motions are rendered at server side and large MTP latency hurt QoE.</strong></p>
+        </div>
+        <div class="column has-text-centered">
+          <video controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/trinity_local_head.mp4" type="video/mp4">
+          </video>
+          <p class="mt-3" style="font-size: 1.25rem;"><strong>Trinity-L: head motion are rendered at VR headset with minimal latency, but MTP latency gap still exists and hurts QoE.</strong></p>
+        </div>
+        <div class="column has-text-centered">
+          <video controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/trinity_adaptive_hand.mp4" type="video/mp4">
+          </video>
+          <p class="mt-3" style="font-size: 1.25rem;"><strong>Trinity: render the hand objects with adatpive latency to brige the gap.</strong></p>
         </div>
       </div>
     </div>
-    <!--/ Paper demo. -->
   </div>
-
 </section>
 
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container">
 
-    <h2 class="title is-3">End-to-end Performance</h2>
+    <h2 class="title is-3">Evaluation Results</h2>
         <div class="content has-text-justified">
           <p>
-            AquaScope achieves 36.7%~40% performance gains in LPIPS compared to the existing systems.
+            Trinity achieves comparable performance compared to the local streaming setup over all metrics.
           </p>
         </div>
         <div class="content has-text-centered">
-          <img src="./static/images/results.png" class="performance-image">
+          <img src="./static/images/qoe_results.png" class="performance-image" style="width: 100%">
         </div>
-  </div>
-</section>
-
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Visual Results</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_optimal.png"
-                  class="interpolation-image"
-                  alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00001_4224_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00002_1725_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00003_124_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_disturbed_6.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00004_605_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00005_15120_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_disturbed_5.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00006_1170_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00007_1863_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00008_2108_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-      <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_disturbed_6.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00009_42432_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-      <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_origin.png"
-                 class="interpolation-image"
-                 alt="Sample 1">
-            <p class="sample-caption">Original</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_optimal.png"
-                 class="interpolation-image"
-                 alt="Sample 2">
-            <p class="sample-caption">No token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_disturbed_7.png"
-                 class="interpolation-image"
-                 alt="Sample 3">
-            <p class="sample-caption">10% token error</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="sample-slide">
-            <img src="./static/images/00010_4370_disturbed_10.png"
-                 class="interpolation-image"
-                 alt="Sample 4">
-            <p class="sample-caption">15% token error</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -605,13 +212,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{tian2025aquascopereliableunderwaterimage,
-  author={Beitong Tian and Lingzhi Zhao and Bo Chen and Mingyuan Wu and Haozhen Zheng and Deepak Vasisht and Francis Y. Yan and Klara Nahrstedt},
-  title={AquaScope: Reliable Underwater Image Transmission on Mobile Devices},
-  eprint={2502.10891},
-  archivePrefix={arXiv},
-  year= {2025},
-}</code></pre>
+    <pre><code></code></pre>
   </div>
 </section>
 
